@@ -66,7 +66,7 @@ class USearch(VectorStore):
         for i, text in enumerate(texts):
             metadata = metadatas[i] if metadatas else {}
             documents.append(Document(page_content=text, metadata=metadata))
-        
+
         if ids is None:
             if self.ids:
                 last_id = int(self.ids[-1]) + 1
